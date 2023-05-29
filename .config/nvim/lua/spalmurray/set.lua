@@ -22,6 +22,9 @@ vim.opt.incsearch = true
 -- colorcolumn
 vim.opt.colorcolumn = "80"
 
+-- cursorline
+vim.opt.cursorline = true
+
 -- colors
 vim.opt.termguicolors = true
 
