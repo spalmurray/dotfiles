@@ -30,3 +30,6 @@ vim.signcolumn = "yes"
 
 -- leader 
 vim.g.mapleader = " "
+
+-- python venv
+vim.g.python3_host_prog = "~/.venv/bin/python3"
