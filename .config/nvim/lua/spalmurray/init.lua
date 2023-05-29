@@ -1,2 +1,2 @@
-require("spalmurray.remap")
 require("spalmurray.set")
+require("spalmurray.remap")
