@@ -29,7 +29,7 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 
 -- signcolumn
-vim.opt.signcolumn = "yes:3"
+vim.opt.signcolumn = "yes:2"
 
 -- leader 
 vim.g.mapleader = " "
