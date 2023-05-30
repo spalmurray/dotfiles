@@ -40,10 +40,8 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+    use("jiangmiao/auto-pairs")
     use('puremourning/vimspector')
     use('airblade/vim-gitgutter')
+    use('Vimjas/vim-python-pep8-indent')
 end)
