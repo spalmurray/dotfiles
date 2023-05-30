@@ -29,7 +29,7 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 
 -- signcolumn
-vim.signcolumn = "yes"
+vim.opt.signcolumn = "yes:3"
 
 -- leader 
 vim.g.mapleader = " "
@@ -37,5 +37,3 @@ vim.g.mapleader = " "
 -- python venv
 vim.g.python3_host_prog = "~/.venv/bin/python3"
 
--- git gutter priority
-vim.g.gitgutter_sign_priority = 100

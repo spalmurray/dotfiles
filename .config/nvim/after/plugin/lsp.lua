@@ -12,7 +12,7 @@ lsp.ensure_installed({
 	'tsserver',
 	'lua_ls',
 	'marksman',
-	'jedi_language_server',
+    'pyright',
 	'rust_analyzer',
 })
 
