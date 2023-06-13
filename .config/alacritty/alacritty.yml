@@ -192,10 +192,10 @@ import:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-colors:
+# colors:
   # Default colors
-  primary:
-    background: '#000000'
+  # primary:
+  #  background: '#000000'
   #  foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
