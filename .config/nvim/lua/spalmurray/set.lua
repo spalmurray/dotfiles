@@ -1,6 +1,7 @@
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 -- indenting
 vim.opt.expandtab = true
