@@ -1,0 +1,45 @@
+{
+  "configurations": {
+    "specific backend test": {
+      "adapter": "debugpy",
+      "filetypes": ["python"],
+      "default": true,
+      "configuration": {
+        "request": "launch",
+        "stopOnEntry": true,
+        "python": "${workspaceRoot}/.venv/bin/python3",
+        //"program": "${workspaceRoot}/.venv/bin/pytest",
+        "program": "${workspaceRoot}/.venv/bin/sentry",
+        "args": ["devserver"],
+        //  "args": ["${workspaceRoot}/tests/sentry/incidents/test_subscription_processor.py"],
+        "django": true
+      },
+      "breakpoints": {
+        "exception": {
+          "caught": "N",
+          "uncaught": "Y"
+        }
+      }
+    },
+    "jest test": {
+      "adapter": "vscode-node",
+      "filetypes": ["javascript", "typescript", "javascriptreact", "typescriptreact"],
+      "default": true,
+      "configuration": {
+        "request": "launch",
+        "protocol": "auto",
+        "stopOnEntry": true,
+        "console": "integratedTerminal",
+        "program": "${workspaceRoot}/scripts/test.js",
+        "args": ["-w 1"],
+        "cwd": "${workspaceRoot}"
+      },
+      "breakpoints": {
+        "exception": {
+          "caught": "N",
+          "uncaught": "Y"
+        }
+      }
+    }
+  }
+}
