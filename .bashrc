@@ -18,12 +18,14 @@ export HOME=/home/spencer
 # Aliases
 alias vim=nvim
 alias c=clear
+alias t='tmux attach || tmux'
 alias ls='ls --color=auto'
 alias code="codium --enable-proposed-api GitHub.copilot --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias gits='git status'
 alias gita='git add'
 alias gitc='git commit -m'
 alias gitp='git push'
+alias lock='swaylock -f && systemctl suspend'
 
 # Exports
 export PATH=$PATH:~/bin/
@@ -51,5 +53,3 @@ shopt -s globstar
 # zoxide init
 eval "$(zoxide init bash)"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
