@@ -25,7 +25,6 @@ alias gits='git status'
 alias gita='git add'
 alias gitc='git commit -m'
 alias gitp='git push'
-alias lock='swaylock -f && systemctl suspend'
 
 # Exports
 export PATH=$PATH:~/bin/
