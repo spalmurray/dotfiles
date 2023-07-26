@@ -8,10 +8,10 @@
         "request": "launch",
         "stopOnEntry": true,
         "python": "${workspaceRoot}/.venv/bin/python3",
-        //"program": "${workspaceRoot}/.venv/bin/pytest",
-        "program": "${workspaceRoot}/.venv/bin/sentry",
-        "args": ["devserver"],
-        //  "args": ["${workspaceRoot}/tests/sentry/incidents/test_subscription_processor.py"],
+        "program": "${workspaceRoot}/.venv/bin/pytest",
+        "args": ["${workspaceRoot}/tests/sentry/integrations/discord/test_integration.py"],
+        //"program": "${workspaceRoot}/.venv/bin/sentry",
+        //"args": ["devserver"],
         "django": true
       },
       "breakpoints": {
