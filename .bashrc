@@ -25,6 +25,7 @@ alias gits='git status'
 alias gita='git add'
 alias gitc='git commit -m'
 alias gitp='git push'
+alias gitu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git merge main'
 
 # Exports
 export PATH=$PATH:~/bin/
