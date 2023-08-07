@@ -21,12 +21,13 @@ alias c=clear
 alias t='tmux attach || tmux'
 alias ls='ls --color=auto'
 alias code="codium --enable-proposed-api GitHub.copilot --enable-features=UseOzonePlatform --ozone-platform=wayland"
-alias gits='git status'
-alias gita='git add'
-alias gitc='git commit -m'
-alias gitp='git push'
-alias gitpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
-alias gitu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git merge main'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git pull'
+alias gpu='git push'
+alias gpuo='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias gu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git merge main'
 
 # Exports
 export PATH=$PATH:~/bin/
