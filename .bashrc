@@ -3,8 +3,8 @@
 #
 
 # Bash history config
-export HISTSIZE=100000
-export HISTFILESIZE=1000000
+export HISTSIZE=
+export HISTFILESIZE=
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
