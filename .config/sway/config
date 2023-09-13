@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
+set $mood Control
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -184,53 +185,53 @@ exec mako
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
+    bindsym $mood+$left focus left
+    bindsym $mood+$down focus down
+    bindsym $mood+$up focus up
+    bindsym $mood+$right focus right
+    # Or use $mood+[up|down|left|right]
+    bindsym $mood+Left focus left
+    bindsym $mood+Down focus down
+    bindsym $mood+Up focus up
+    bindsym $mood+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    bindsym $mood+Shift+$left move left
+    bindsym $mood+Shift+$down move down
+    bindsym $mood+Shift+$up move up
+    bindsym $mood+Shift+$right move right
     # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
+    bindsym $mood+Shift+Left move left
+    bindsym $mood+Shift+Down move down
+    bindsym $mood+Shift+Up move up
+    bindsym $mood+Shift+Right move right
     
     mouse_warping none
 #
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    bindsym $mood+1 workspace number 1
+    bindsym $mood+2 workspace number 2
+    bindsym $mood+3 workspace number 3
+    bindsym $mood+4 workspace number 4
+    bindsym $mood+5 workspace number 5
+    bindsym $mood+6 workspace number 6
+    bindsym $mood+7 workspace number 7
+    bindsym $mood+8 workspace number 8
+    bindsym $mood+9 workspace number 9
+    bindsym $mood+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+    bindsym $mood+Shift+1 move container to workspace number 1
+    bindsym $mood+Shift+2 move container to workspace number 2
+    bindsym $mood+Shift+3 move container to workspace number 3
+    bindsym $mood+Shift+4 move container to workspace number 4
+    bindsym $mood+Shift+5 move container to workspace number 5
+    bindsym $mood+Shift+6 move container to workspace number 6
+    bindsym $mood+Shift+7 move container to workspace number 7
+    bindsym $mood+Shift+8 move container to workspace number 8
+    bindsym $mood+Shift+9 move container to workspace number 9
+    bindsym $mood+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -257,16 +258,16 @@ exec mako
     # bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    # bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+escape move scratchpad
+    # bindsym $mod+Shift+escape move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+escape Scratchpad show
+    # bindsym $mod+escape Scratchpad show
 #
 # Resizing containers:
 #
