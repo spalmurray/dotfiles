@@ -155,6 +155,12 @@ exec mako
         xkb_numlock enabled
     }
 
+    input "10730:866:Kinesis_Corporation_Adv360_Pro_Keyboard" {
+        repeat_delay 300
+        repeat_rate 30
+        xkb_capslock disabled
+        xkb_numlock enabled
+    }
 
 ### Key bindings
 #
