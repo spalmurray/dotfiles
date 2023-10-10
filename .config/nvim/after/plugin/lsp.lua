@@ -4,18 +4,6 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
 end)
 
-lsp.ensure_installed({
-	'bashls',
-	'clangd',
-	'cssls',
-	'eslint',
-	'tsserver',
-	'lua_ls',
-	'marksman',
-    'pyright',
-	'rust_analyzer',
-})
-
 lsp.setup()
 
 local cmp = require('cmp')
