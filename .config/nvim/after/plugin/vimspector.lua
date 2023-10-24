@@ -1,6 +1,6 @@
 vim.g.vimspector_sidebar_width = 80
 vim.g.vimspector_bottombar_height = 20
-vim.g.vimspector_base_dir = '$HOME/.local/share/nvim/site/pack/packer/start/vimspector'
+vim.g.vimspector_base_dir = '/home/spencer/.local/share/nvim/site/pack/packer/start/vimspector'
 
 vim.keymap.set("n", "<F5>", ":call vimspector#Continue()<CR>")
 vim.keymap.set("n", "<F6>", ":call vimspector#Restart()<CR>")
