@@ -131,6 +131,7 @@ exec mako
         repeat_delay 300
         repeat_rate 30
         xkb_capslock disabled
+        xkb_options caps:escape
         xkb_numlock enabled
     }
 
@@ -138,6 +139,7 @@ exec mako
         repeat_delay 300
         repeat_rate 30
         xkb_capslock disabled
+        xkb_options caps:escape
         xkb_numlock enabled
     }
 
@@ -145,6 +147,7 @@ exec mako
         repeat_delay 300
         repeat_rate 30
         xkb_capslock disabled
+        xkb_options caps:escape
         xkb_numlock enabled
     }
 
@@ -196,6 +199,7 @@ exec mako
     bindsym XF86MonBrightnessDown exec xbacklight -dec 10
     bindsym XF86MonBrightnessUp exec xbacklight -inc 10
     bindsym $mod+Shift+4 exec grim -g "$(slurp)" - | wl-copy
+
 #
 # Moving around:
 #
