@@ -1,0 +1,4 @@
+import = ["/home/spencer/.config/alacritty/gruvbox-material-alacritty.toml"]
+
+[window]
+title = ""
