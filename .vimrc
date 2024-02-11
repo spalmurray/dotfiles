@@ -30,29 +30,6 @@ let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
 autocmd InsertEnter,InsertLeave * set cul!
 
-" vimplug
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" vim-plug config
-call plug#begin()
-" The default plugin directory will be as follows:
-"   - Vim (Linux/macOS): '~/.vim/plugged'
-"   - Vim (Windows): '~/vimfiles/plugged'
-"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
-" You can specify a custom plugin directory by passing it as the argument
-"   - e.g. `call plug#begin('~/.vim/plugged')`
-"   - Avoid using standard Vim directory names like 'plugin'
-
-" Make sure you use single quotes
-Plug 'sainnhe/gruvbox-material'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-sensible'
-Plug 'jamessan/vim-gnupg'
-Plug 'scrooloose/nerdtree'
-Plug 'Yggdroot/indentLine'
-
-" Initialize plugin system
-call plug#end()
-
 " Show quotes in JSON
 let g:conceallevel = 0
 let g:indentLine_setConceal = 0
