@@ -23,7 +23,7 @@ alias ls='ls --color=auto'
 alias code="codium --enable-proposed-api GitHub.copilot --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias gs='git status'
 alias ga='git add'
-alias gc='git commit -m'
+alias gc='git commit -S -m'
 alias gp='git pull'
 alias gpu='git push'
 alias gpuo='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
@@ -43,7 +43,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if test -z "${XDG_RUNTIME_DIR}"; then
-    export XDG_RUNTIME_DIR=/tmp/"${XDG_RUNTIME_DIR}"-runtime-dir
+    export XDG_RUNTIME_DIR=/tmp/spencers-runtime-dir
     if ! test -d "${XDG_RUNTIME_DIR}"; then
         mkdir "${XDG_RUNTIME_DIR}"
         chmod 0700 "${XDG_RUNTIME_DIR}"
@@ -59,3 +59,13 @@ shopt -s globstar
 # zoxide init
 eval "$(zoxide init bash)"
 
+export FZF_DEFAULT_COMMAND='find ~'
+export FZF_DEFAULT_OPTS='--border'
+
+# gpg for ssh
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
