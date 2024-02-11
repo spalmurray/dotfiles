@@ -20,7 +20,8 @@ alias vim=nvim
 alias c=clear
 alias t='tmux attach || tmux'
 alias ls='ls --color=auto'
-alias code="codium --enable-proposed-api GitHub.copilot --enable-features=UseOzonePlatform --ozone-platform=wayland"
+
+# git aliases
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -S -m'
