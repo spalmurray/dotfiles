@@ -2,6 +2,7 @@ import = ["/home/spencer/.config/alacritty/gruvbox-material-alacritty.toml"]
 
 [window]
 title = ""
+decorations = "none"
 
 [shell]
 program = "/opt/homebrew/bin/bash"
