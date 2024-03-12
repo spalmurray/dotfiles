@@ -2,12 +2,16 @@ ctrl - return : open -na /Applications/Alacritty.app
 
 # rebinds
 ctrl - c [
-    "alacritty" ~
-    * : skhd -k "cmd - c"
+  "alacritty" ~
+  * : skhd -k "cmd - c"
 ]
 ctrl - v [
-    "alacritty" ~
-    * : skhd -k "cmd - v"
+  "alacritty" ~
+  * : skhd -k "cmd - v"
+]
+ctrl - x [
+  "alacritty" ~
+  * : skhd -k "cmd - x"
 ]
 shift + ctrl - c [
   "alacritty" : skhd -k "cmd - c"
@@ -17,13 +21,33 @@ shift + ctrl - v [
   "alacritty" : skhd -k "cmd - v"
   * ~
 ]
+ctrl - a [
+  "alacritty" ~
+  * : skhd -k "cmd - a"
+]
 ctrl - t : skhd -k "cmd - t"
 shift + ctrl - t : skhd -k "shift + cmd - t"
+ctrl - n [ 
+  "alacritty" ~
+  * : skhd -k "cmd - n"
+]
+ctrl - r [
+  "alacritty" ~
+  * : skhd -k "cmd - r"
+]
 ctrl - w [
   "alacritty" ~
   * : skhd -k "cmd - w"
 ]
-ctrl - q : skhd -k "cmd - q"
+ctrl - q : skhd -k "cmd - q" && sleep 0.25 && yabai -m window --focus mouse
+ctrl - z [
+  "alacritty" ~
+  * : skhd -k "cmd - z"
+]
+shift + ctrl - z [
+  "alacritty" ~
+  * : skhd -k "shift + cmd - z"
+]
 
 # yabai
 #ctrl - 1 : yabai -m space --focus 1
