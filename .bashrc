@@ -24,8 +24,8 @@ export PS1="\[\e[31m\]\u\]\e[37m\]@\e[33m\]work\e[37m\]:\e[32m\]\w \e[37m\]\n\\$
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-gpg-connect-agent updatestartuptty /bye > /dev/null
 export HOME=/Users/spencer
+alias gpgtty='gpg-connect-agent updatestartuptty /bye > /dev/null'
 
 # Aliases
 alias vim=nvim
