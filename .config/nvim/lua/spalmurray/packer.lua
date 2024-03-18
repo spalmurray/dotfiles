@@ -52,6 +52,7 @@ return require('packer').startup(function(use)
     use('puremourning/vimspector')
     use('airblade/vim-gitgutter')
     use('lukas-reineke/indent-blankline.nvim')
+    use('github/copilot.vim')
 
     if packer_bootstrap then
         require('packer').sync()
