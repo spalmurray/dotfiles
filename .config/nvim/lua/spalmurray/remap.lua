@@ -17,3 +17,8 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>K", vim.diagnostic.open_float)
+
+-- remap quickfix next, previous, close
+vim.keymap.set("n", "<C-n>", vim.cmd.cnext)
+vim.keymap.set("n", "<C-p>", vim.cmd.cprev)
+vim.keymap.set("n", "<leader>q", vim.cmd.cclose)
