@@ -30,7 +30,6 @@ alias gpgtty='gpg-connect-agent updatestartuptty /bye > /dev/null'
 # Aliases
 alias vim=nvim
 alias c=clear
-alias lock=swaylock
 alias t='tmux attach || tmux'
 alias ls='ls --color=auto'
 
