@@ -19,7 +19,7 @@ export HOME=/home/spencer
 alias vim=nvim
 alias c=clear
 alias lock=swaylock
-alias t='tmux attach || tmux'
+alias t='tmux attach || tmux -u'
 alias ls='ls --color=auto'
 alias gpgtty='gpg-connect-agent updatestartuptty /bye >/dev/null'
 
