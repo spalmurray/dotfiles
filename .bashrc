@@ -37,10 +37,14 @@ alias ls='ls --color=auto'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -S -m'
+alias gcob='git checkout -b'
+alias gco='git checkout'
+alias gd='git diff'
+alias gr='git rebase'
 alias gp='git pull'
 alias gpu='git push'
 alias gpuo='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
-alias gu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git merge main'
+alias gu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git rebase main'
 
 # Exports
 export PATH=$PATH:~/bin/
