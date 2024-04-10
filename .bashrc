@@ -66,8 +66,10 @@ shopt -s globstar
 # zoxide init
 eval "$(zoxide init bash)"
 
+# fzf init
 export FZF_DEFAULT_COMMAND='find ~'
 export FZF_DEFAULT_OPTS='--border'
+eval "$(fzf --bash)"
 
 # gpg for ssh
 unset SSH_AGENT_PID
