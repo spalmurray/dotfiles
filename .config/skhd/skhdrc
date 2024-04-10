@@ -25,7 +25,10 @@ ctrl - a [
   "alacritty" ~
   * : skhd -k "cmd - a"
 ]
-ctrl - t : skhd -k "cmd - t"
+ctrl - t [
+    "alacritty" ~
+    * : skhd -k "cmd - t"
+]
 shift + ctrl - t : skhd -k "shift + cmd - t"
 ctrl - n [ 
   "alacritty" ~

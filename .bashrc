@@ -62,6 +62,10 @@ shopt -s globstar
 # zoxide init
 eval "$(zoxide init bash)"
 
+# fzf init
 export FZF_DEFAULT_COMMAND='find ~'
 export FZF_DEFAULT_OPTS='--border'
-
+bind -m emacs-standard '"\C-f": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
+bind -m vi-command '"\C-f": "\C-z\C-f\C-z"'
+bind -m vi-insert '"\C-f": "\C-z\C-f\C-z"'
+eval "$(fzf --bash)"
