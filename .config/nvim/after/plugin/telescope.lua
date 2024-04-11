@@ -1,7 +1,9 @@
 require('telescope').setup{
     defaults = {
         file_ignore_patterns = {
-            ".git/"
+            ".git/",
+            "index.ts",
+            "index.js"
         },
         path_display = {
             "truncate"
