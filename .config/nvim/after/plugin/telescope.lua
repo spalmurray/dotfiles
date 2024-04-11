@@ -3,7 +3,8 @@ require('telescope').setup{
         file_ignore_patterns = {
             ".git/",
             "node_modules/",
-            ".git/"
+            "index.ts",
+            "index.js"
         },
         path_display = {
             "truncate"
