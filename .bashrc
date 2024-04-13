@@ -45,6 +45,10 @@ alias gp='gpgtty && git pull'
 alias gpu='gpgtty && git push'
 alias gpuo='gpgtty && git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && gpgtty && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git rebase main'
+# git autocomplete
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
 
 # Exports
 export PATH=$PATH:~/bin/
@@ -62,6 +66,10 @@ shopt -s globstar
 # zoxide init
 eval "$(zoxide init bash)"
 
+# fzf init
 export FZF_DEFAULT_COMMAND='find ~'
 export FZF_DEFAULT_OPTS='--border'
-
+bind -m emacs-standard '"\C-f": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
+bind -m vi-command '"\C-f": "\C-z\C-f\C-z"'
+bind -m vi-insert '"\C-f": "\C-z\C-f\C-z"'
+eval "$(fzf --bash)"
