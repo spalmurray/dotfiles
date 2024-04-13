@@ -22,6 +22,7 @@ alias lock=swaylock
 alias t='tmux attach || tmux -u'
 alias ls='ls --color=auto'
 alias gpgtty='gpg-connect-agent updatestartuptty /bye >/dev/null'
+alias python='python3'
 
 # git aliases
 alias gs='git status'
