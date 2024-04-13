@@ -36,8 +36,8 @@ alias gpu='gpgtty && git push'
 alias gpuo='gpgtty && git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && gpgtty && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git rebase main'
 # git autocomplete
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+if [ -f /etc/bash_completion.d/git-completion.bash ]; then
+  /etc/bash_completion.d/git-completion.bash
 fi
 
 # Exports
@@ -73,7 +73,7 @@ eval "$(zoxide init bash)"
 # fzf init
 export FZF_DEFAULT_COMMAND='find ~'
 export FZF_DEFAULT_OPTS='--border'
-eval "$(fzf --bash)"
+source /usr/share/fzf/key-bindings.bash
 
 # gpg for ssh
 unset SSH_AGENT_PID
