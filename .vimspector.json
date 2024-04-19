@@ -1,44 +1,53 @@
 {
+  "adapters": {
+    "codecov-api-docker": {
+      "port": 12345
+    },
+    "codecov-api-docker-test": {
+      "port": 12346,
+      "launch": {
+        "remote": {
+          "container": "umbrella-hat-api-1",
+          "runCommand": [
+            "python", "-m", "debugpy",
+            "--listen", "0.0.0.0:12346",
+            "--wait-for-client",
+            "%CMD%"
+          ]
+        },
+        "delay": "1000m"
+      }
+    }
+  },
   "configurations": {
-    "specific backend test": {
-      "adapter": "debugpy",
+    "codecov-api": {
+      "adapter": "codecov-api-docker",
       "filetypes": ["python"],
-      "default": true,
       "configuration": {
-        "request": "launch",
-        "stopOnEntry": true,
-        "python": "${workspaceRoot}/.venv/bin/python3",
-        "program": "${workspaceRoot}/.venv/bin/pytest",
-        "args": ["${workspaceRoot}/tests/sentry/integrations/discord/test_integration.py"],
-        //"program": "${workspaceRoot}/.venv/bin/sentry",
-        //"args": ["devserver"],
-        "django": true
-      },
-      "breakpoints": {
-        "exception": {
-          "caught": "N",
-          "uncaught": "Y"
-        }
+        "request": "attach",
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/app-dir"
+          }
+        ]
       }
     },
-    "jest test": {
-      "adapter": "vscode-node",
-      "filetypes": ["javascript", "typescript", "javascriptreact", "typescriptreact"],
-      "default": true,
+    "codecov-api-test": {
+      "adapter": "codecov-api-docker-test",
+      "filetypes": ["python"],
+      "remote-request": "launch",
+      "remote-cmdLine": [
+        "/usr/local/bin/pytest", "${test_path}"
+      ],
       "configuration": {
-        "request": "launch",
-        "protocol": "auto",
-        "stopOnEntry": true,
-        "console": "integratedTerminal",
-        "program": "${workspaceRoot}/scripts/test.js",
-        "args": ["-w 1"],
-        "cwd": "${workspaceRoot}"
-      },
-      "breakpoints": {
-        "exception": {
-          "caught": "N",
-          "uncaught": "Y"
-        }
+        "request": "attach",
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/app-dir"
+          }
+        ]
       }
     }
   }
