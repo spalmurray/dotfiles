@@ -4,6 +4,7 @@
 
 # macos stuff
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 alias python='python3'
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
