@@ -25,33 +25,22 @@ return require('packer').startup(function(use)
         end
     }
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use('theprimeagen/harpoon')
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            {'williamboman/mason-lspconfig.nvim'},
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'L3MON4D3/LuaSnip'},
-        }
-    }
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+    use 'mfussenegger/nvim-lint'
+    use 'mhartington/formatter.nvim'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'L3MON4D3/LuaSnip'
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-    use('puremourning/vimspector')
-    use('airblade/vim-gitgutter')
-    use('lukas-reineke/indent-blankline.nvim')
+    use 'puremourning/vimspector'
+    use 'airblade/vim-gitgutter'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use 'theprimeagen/harpoon'
 
     if packer_bootstrap then
         require('packer').sync()
