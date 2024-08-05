@@ -4,6 +4,7 @@
 
 # macos stuff
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 alias python='python3'
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -38,9 +39,10 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit -S -m'
 alias gcob='git checkout -b'
-alias gco='git checkout'
+alias gco='git checkout $(git branch -l | fzf)'
+alias gcom='git checkout main'
 alias gd='git diff'
-alias gr='git rebase'
+alias gr='git rebase $(git branch -l | fzf)'
 alias gp='gpgtty && git pull'
 alias gpu='gpgtty && git push'
 alias gpuo='gpgtty && git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
