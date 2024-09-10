@@ -33,6 +33,7 @@ alias vim=nvim
 alias c=clear
 alias t='tmux attach || tmux'
 alias ls='ls --color=auto'
+alias nukedocker='docker system prune -af && docker volume prune -af'
 
 # git aliases
 alias gs='git status'
@@ -75,3 +76,7 @@ bind -m emacs-standard '"\C-f": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h
 bind -m vi-command '"\C-f": "\C-z\C-f\C-z"'
 bind -m vi-insert '"\C-f": "\C-z\C-f\C-z"'
 eval "$(fzf --bash)"
+
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
