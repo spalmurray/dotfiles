@@ -4,7 +4,7 @@ require("mason-lspconfig").setup({
         'bashls',
         'clangd',
         'cssls',
-        'tsserver',
+        'ts_ls',
         'lua_ls',
         'marksman',
         'pyright',
@@ -15,7 +15,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig').bashls.setup{ capabilities = capabilities }
 require('lspconfig').clangd.setup{ capabilities = capabilities }
 require('lspconfig').cssls.setup{ capabilities = capabilities }
-require('lspconfig').tsserver.setup{ capabilities = capabilities }
+require('lspconfig').ts_ls.setup{ capabilities = capabilities }
 require('lspconfig').lua_ls.setup{ capabilities = capabilities }
 require('lspconfig').marksman.setup{ capabilities = capabilities }
 require('lspconfig').pyright.setup{ capabilities = capabilities }
