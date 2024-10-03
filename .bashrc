@@ -22,8 +22,9 @@ export HISTFILESIZE=
 export PS1="\[\e[31m\]\u\]\e[37m\]@\e[33m\]work\e[37m\]:\e[32m\]\w \e[37m\]\n\\$ "
 
 # GPG
-export GPG_TTY=$(tty)
+unset SSH_AGENT_PID
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 export HOME=/Users/spencer
 alias gpgtty='gpg-connect-agent updatestartuptty /bye > /dev/null'

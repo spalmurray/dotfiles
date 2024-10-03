@@ -3,5 +3,6 @@
   "venv": ".venv",
   "extraPaths": [
     "/Users/spencer/code/umbrella-hat/shared"
-  ]
+  ],
+  "typeCheckingMode": "standard",
 }
