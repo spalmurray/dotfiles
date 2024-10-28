@@ -1,10 +1,10 @@
-import = ["/home/spencer/.config/alacritty/gruvbox-material-alacritty.toml"]
+general.import = ["/home/spencer/.config/alacritty/gruvbox-material-alacritty.toml"]
 
 [window]
 title = ""
 decorations = "none"
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/bash"
 
 [font]
