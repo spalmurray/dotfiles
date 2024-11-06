@@ -12,6 +12,8 @@ export HISTFILESIZE=
 export PS1="\[\e[31m\]\u\]\e[37m\]@\e[33m\]\h\e[37m\]:\e[32m\]\w \e[37m\]\n\\$ "
 
 # GPG
+unset SSH_AGENT_PID
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 export GPG_TTY=$(tty)
 export HOME=/home/spencer
 
