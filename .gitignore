@@ -4,3 +4,4 @@ tags
 pyrightconfig.json
 .vimspector.json
 __pycache__
+pyproject.toml

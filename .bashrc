@@ -22,8 +22,9 @@ export HISTFILESIZE=
 export PS1="\[\e[31m\]\u\]\e[37m\]@\e[33m\]work\e[37m\]:\e[32m\]\w \e[37m\]\n\\$ "
 
 # GPG
-export GPG_TTY=$(tty)
+unset SSH_AGENT_PID
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 export HOME=/Users/spencer
 alias gpgtty='gpg-connect-agent updatestartuptty /bye > /dev/null'
@@ -33,6 +34,7 @@ alias vim=nvim
 alias c=clear
 alias t='tmux attach || tmux'
 alias ls='ls --color=auto'
+alias nukedocker='docker system prune -af && docker volume prune -af'
 
 # git aliases
 alias gs='git status'
@@ -75,3 +77,7 @@ bind -m emacs-standard '"\C-f": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h
 bind -m vi-command '"\C-f": "\C-z\C-f\C-z"'
 bind -m vi-insert '"\C-f": "\C-z\C-f\C-z"'
 eval "$(fzf --bash)"
+
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

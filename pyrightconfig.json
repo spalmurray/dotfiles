@@ -2,6 +2,7 @@
   "venvPath": "./",
   "venv": ".venv",
   "extraPaths": [
-    "/Users/spencer/code/shared"
-  ]
+    "/Users/spencer/code/umbrella-hat/shared"
+  ],
+  "typeCheckingMode": "standard",
 }
