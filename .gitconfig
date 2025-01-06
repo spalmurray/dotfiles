@@ -3,6 +3,7 @@
 # Please adapt and uncomment the following lines:
 name = Spencer Murray
 email = spencer@spalmurray.com
+signingKey = CECDFF3BDEC42C78!
 [core]
 	excludesFile = ~/.gitignore
 [credential]
