@@ -2,7 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 name = Spencer Murray
-email = spencer.murray@sentry.io
+	email = spencer.murray@sentry.io
 [core]
 	excludesFile = ~/.gitignore
 [credential]
