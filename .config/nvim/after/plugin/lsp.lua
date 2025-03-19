@@ -56,6 +56,9 @@ require("formatter").setup {
         },
         yaml = {
             require("formatter.filetypes.yaml").prettierd
+        },
+        python = {
+            require("formatter.filetypes.python").ruff
         }
     }
 }
@@ -69,7 +72,8 @@ require('lint').linters_by_ft = {
     javascript = {'eslint_d'},
     javascriptreact = {'eslint_d'},
     typescript = {'eslint_d'},
-    typescriptreact = {'eslint_d'}
+    typescriptreact = {'eslint_d'},
+    python = {'ruff'}
 }
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     callback = function()
