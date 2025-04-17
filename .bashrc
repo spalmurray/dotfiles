@@ -3,12 +3,10 @@
 #
 
 # macos stuff
+export PATH="/Users/spencer/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 alias python='python3'
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export SHELL="/opt/homebrew/bin/bash"
 
@@ -44,6 +42,7 @@ alias gcob='git checkout -b'
 alias gco='git checkout $(git branch -l | fzf)'
 alias gcom='git checkout main'
 alias gd='git diff'
+alias gl='git log'
 alias gr='git rebase $(git branch -l | fzf)'
 alias gp='gpgtty && git pull'
 alias gpu='gpgtty && git push'
