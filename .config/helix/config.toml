@@ -1,0 +1,16 @@
+theme = "gruvbox-material"
+
+[editor]
+line-number = "relative"
+completion-timeout = 5
+rulers = [80]
+auto-format = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
