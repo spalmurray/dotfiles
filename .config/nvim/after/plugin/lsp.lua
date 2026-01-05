@@ -45,9 +45,9 @@ require("formatter").setup {
             require("formatter.filetypes.javascriptreact").prettierd,
             require("formatter.filetypes.javascriptreact").eslint_d
         },
-        markdown = {
-            require("formatter.filetypes.markdown").prettierd
-        },
+        -- markdown = {
+        --     require("formatter.filetypes.markdown").prettierd
+        -- },
         css = {
             require("formatter.filetypes.css").prettierd
         },

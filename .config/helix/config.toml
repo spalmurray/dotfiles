@@ -4,7 +4,6 @@ theme = "gruvbox-material"
 line-number = "relative"
 completion-timeout = 5
 rulers = [80]
-auto-format = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -14,3 +13,6 @@ hidden = false
 
 [editor.indent-guides]
 render = true
+
+[editor.soft-wrap]
+enable = true

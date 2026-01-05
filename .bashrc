@@ -5,7 +5,9 @@
 # macos stuff
 export PATH="/Users/spencer/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH" export PATH="/Users/spencer/.local/share/sentry-devenv/bin/:$PATH"
+export PATH="/Users/spencer/.local/bin:$PATH"
+export PATH="/Users/spencer/.local/share/nvim/mason/bin:$PATH" # LSP
 alias python='python3'
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export SHELL="/opt/homebrew/bin/bash"
@@ -48,7 +50,16 @@ alias gp='gpgtty && git pull'
 alias gpu='gpgtty && git push'
 alias gpuo='gpgtty && git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gu='CURRENT_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && gpgtty && git checkout main && git pull && git checkout $CURRENT_GIT_BRANCH && git rebase main'
+alias grs='git rebase --exec '"'"'git commit --amend --no-edit -S'"'"' origin/main'
 alias gpr='gh pr create'
+function gwa() {
+    git worktree add "../spalmurray/$1" -b "spalmurray/$1"
+    cd "../spalmurray/$1"
+    direnv allow
+}
+alias gwl='git worktree list'
+alias gwr='git worktree remove $(git worktree list | awk '"'"'{print $1}'"'"' | grep spalmurray | fzf)'
+alias gcow='cd $(git worktree list | awk '"'"'{print $1}'"'"' | fzf)'
 # git autocomplete
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
   . `brew --prefix`/etc/bash_completion.d/git-completion.bash
@@ -57,8 +68,8 @@ fi
 # Exports
 export PATH=$PATH:~/bin/
 export PATH=$PATH:"$HOME.local/bin"
-export SUDO_EDITOR=vim
-export EDITOR=vim
+export SUDO_EDITOR=hx
+export EDITOR=hx
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Use vim binds
@@ -81,3 +92,10 @@ eval "$(fzf --bash)"
 # volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+
+eval "$(direnv hook bash)"
+
+
+### Richard shell aliases
+source ~/.bashrc.richardcommands

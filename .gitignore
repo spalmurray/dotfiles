@@ -5,3 +5,6 @@ pyrightconfig.json
 .vimspector.json
 __pycache__
 pyproject.toml
+AGENTS.md
+CLAUDE.md
+.claude
