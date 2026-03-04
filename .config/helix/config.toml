@@ -1,4 +1,4 @@
-theme = "gruvbox-material"
+theme = "gruvbox"
 
 [editor]
 line-number = "relative"
@@ -14,3 +14,6 @@ hidden = false
 
 [editor.indent-guides]
 render = true
+
+[editor.soft-wrap]
+enable = true

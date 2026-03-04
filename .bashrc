@@ -25,6 +25,7 @@ alias t='tmux attach || tmux -u'
 alias ls='ls --color=auto'
 alias gpgtty='gpg-connect-agent updatestartuptty /bye >/dev/null'
 alias python='python3'
+alias fixsongs='IFS=$'"'"'\n'"'"'; for song in $(ls | grep ’); do     echo $song; mv $song $(echo $song | sed "s/’/'"'"'/g"); done'
 
 # git aliases
 alias gs='git status'
@@ -47,6 +48,7 @@ fi
 # Exports
 export PATH=$PATH:~/bin/
 export PATH=$PATH:/home/spencer/.local/bin
+export PATH=$PATH:/home/spencer/.cargo/bin
 export SUDO_EDITOR=vim
 export EDITOR=vim
 export PICO_SDK_PATH=/home/spencer/Documents/projects/pico/pico-sdk
